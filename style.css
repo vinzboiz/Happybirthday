@@ -1,0 +1,490 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+    background: linear-gradient(to right, #FBDAE9, #EFB0C9);
+    overflow: hidden;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+.container .mail{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    animation: envelope 1s forwards;
+    animation-delay: 11.5s;
+    z-index: 100000000;
+}
+.container .mail .fa-envelope{
+    position: absolute;
+    margin-top: 50px;
+    font-size: 40px;
+    color: red;
+    top: 6.2em;
+    cursor: pointer;
+    z-index: 1000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes envelope{
+    0%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
+.container .mail .fa-envelope:hover{
+    filter: drop-shadow(0 0 10px red);
+    animation: mail1 0.3s infinite ease-in-out;
+    transition: all 1s ease-in;
+}
+@keyframes mail1{
+    0%{
+        transform: rotate(-10deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-10deg);
+    }
+}
+.container .mail .fa-envelope::after{
+    position: absolute;
+    content: '';
+    width: 55px;
+    height: 45px;
+    background: white;
+    z-index: -1;
+    border-radius: 10px;
+}
+.container .boxcute{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.container .cute1{
+    position: absolute;
+    top: 210px;
+    left: -100px;
+    animation: cute 3s infinite ease-in-out;
+    animation-delay: 13s;
+}
+.container .cute1::after{
+    position: absolute;
+    content: 'Ngạc nhiên chưa kkk';
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 10px;
+    width: 80px;
+    font-size: 10px;
+    background: white;
+    border-radius: 15px;
+    margin-top: -30px;
+    margin-left: -40px;
+    animation: cutemail 3s linear infinite;
+    animation-delay: 13s;
+    z-index: -1;
+    opacity: 0;
+    font-weight: 600;
+}
+
+.container .cute2{
+    position: absolute;
+    top: 210px;
+    right: -100px;
+    transform: scaleX(-1);
+    animation: cute2 3s infinite ease-in-out;
+    animation-delay: 12s;
+}
+
+.container .cute2::after{
+    position: absolute;
+    content: 'Ú Òa';
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 10px;
+    width: 80px;
+    font-size: 10px;
+    background: white;
+    border-radius: 15px;
+    margin-top: -30px;
+    margin-left: -100px;
+    /* animation: cutemail2 3s linear infinite; */
+    animation-delay: 12s;
+    z-index: -1;
+    opacity: 0;
+    font-weight: 600;
+}
+
+.container .cute1 img{
+    width: 100px;
+    height: 100px;
+}
+.container .cute2 img{
+    width: 100px;
+    height: 100px;
+}
+.boxMail{
+    position: fixed;
+    background: rgb(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.3);
+    visibility: hidden;
+    transition: all 0.5s;
+    z-index: 100000000;
+}
+.boxMail.active{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+.boxMail .boxMail-container{
+    position: absolute;
+    width: 750px;
+    height: 500px;
+    display: flex;
+    margin: 0;
+    transform: scale(0.9);
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    transition: all 0.5s;
+}
+.boxMail .boxMail-container:hover{
+    transform: rotate(-5deg);
+    filter: drop-shadow(0 0 10px red);
+}
+.boxMail .boxMail-container:hover .card1{
+    transform: translate(-187px, -250px) rotateY(-140deg);
+}
+.boxMail .boxMail-container .card1,
+.boxMail .boxMail-container .card2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+}
+.boxMail .boxMail-container .card1{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(169, 0, 0), rgb(202, 0, 0) 30%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.boxMail-container .card1{
+    z-index: 1;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: all 1s ease-in-out;
+}
+.boxMail .boxMail-container .card1 .userImg{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.boxMail .boxMail-container .card1 .userImg img{
+    position: absolute;
+    object-fit: cover;
+    width: calc(100%);
+    height: calc(100%);
+}
+.boxMail .boxMail-container .card1 h3{
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    text-transform: uppercase;
+    width: 80%;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 5px;
+    transform: rotate(-5deg);
+    text-shadow: 0 0 5px white,
+                0 0 10px white;
+}
+.boxMail .boxMail-container .card2{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, #e0e0e0, #ffffff 30%);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: all 1s;
+}
+.boxMail .boxMail-container .card2 .card2-content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #ffd2e4;
+    transition: all 1s;
+    overflow: hidden;
+}
+.boxMail .boxMail-container:hover .card2-content{
+    transform: translate(20px, 20px);
+    box-shadow: -1px -1px 5px rgb(0, 0, 0, 0.4);
+}
+.boxMail .boxMail-container .card2 h3{
+    font-family: 'Dancing Script', cursive;
+    padding: 20rem;
+    left: -40px;
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    font-size:25x;
+    text-shadow: 0 0 8px red;
+}
+.boxMail .boxMail-container .card2:hover h3{
+    animation: texth3 3s forwards;
+    animation-delay: 2s;
+    transition: 1s;
+}
+@keyframes texth3{
+    0%{
+        opacity: 1;
+        visibility: visible;
+        padding: 20px 0px 10px 60px;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+        padding: 20px 0px 10px 152px; 
+    }
+}
+.boxMail .boxMail-container .card2 h2{
+    font-family: 'Dancing Script', cursive;
+    padding: 0px 20px;
+    text-indent: 20px;
+    font-size: 25px;
+    opacity: 0;
+}
+.boxMail .boxMail-container .card2:hover h2{
+    animation: texth2 2s forwards;
+    animation-delay: 4s;
+    transition: 1s;
+}
+@keyframes texth2{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.boxMail .boxMail-container .card2 .card2-content .imageCute2{
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    opacity: 0;
+
+}
+.boxMail .boxMail-container .card2 .card2-content:hover .imageCute2{
+    animation: cute3 0s linear infinite,
+                cute4 0s 0s forwards;
+
+}
+.boxMail .boxMail-container .card2 .card2-content .imageCute2 img{
+    width: 40px;
+}
+.boxMail .fa-xmark{
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    padding: 15px 30px;
+    cursor: pointer;
+    color: white;
+    z-index: 10000000000000000;
+}
+
+#cake {
+  display: block;
+  position: relative;
+  margin: -10em auto 0 auto;
+}
+
+/* ============================================== Candle
+*/
+.velas {
+  background: #ffffff;
+  border-radius: 10px;
+  position: absolute;
+  top: 228px;
+  left: 50%;
+  margin-left: -2.4px;
+  margin-top: -8.33333333px;
+  width: 5px;
+  height: 35px;
+  transform: translateY(-300px);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-animation: in 500ms 6s ease-out forwards;
+          animation: in 500ms 6s ease-out forwards;
+}
+
+.velas:after,
+.velas:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.22222222px;
+}
+
+.velas:after {
+  top: 25%;
+  left: 0;
+}
+
+.velas:before {
+  top: 45%;
+  left: 0;
+}
+
+/* ============================================== Fire
+*/
+.fuego {
+  border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -2.6px;
+  width: 6.66666667px;
+  height: 18px;
+}
+
+.fuego:nth-child(1) {
+  -webkit-animation: fuego 2s 6.5s infinite;
+          animation: fuego 2s 6.5s infinite;
+}
+
+.fuego:nth-child(2) {
+  -webkit-animation: fuego 1.5s 6.5s infinite;
+          animation: fuego 1.5s 6.5s infinite;
+}
+
+.fuego:nth-child(3) {
+  -webkit-animation: fuego 1s 6.5s infinite;
+          animation: fuego 1s 6.5s infinite;
+}
+
+.fuego:nth-child(4) {
+  -webkit-animation: fuego 0.5s 6.5s infinite;
+          animation: fuego 0.5s 6.5s infinite;
+}
+
+.fuego:nth-child(5) {
+  -webkit-animation: fuego 0.2s 6.5s infinite;
+          animation: fuego 0.2s 6.5s infinite;
+}
+
+/* ============================================== Animation Fire
+*/
+@-webkit-keyframes fuego {
+  0%, 100% {
+    background: rgba(254, 248, 97, 0.5);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    transform: translateY(-20px) scale(0);
+  }
+}
+@keyframes fuego {
+  0%, 100% {
+    background: rgba(254, 248, 97, 0.5);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    transform: translateY(-20px) scale(0);
+  }
+}
+@-webkit-keyframes in {
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes in {
+  to {
+    transform: translateY(0);
+  }
+}
+.text {
+  color: #8b6a60;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+}
+.text h1 {
+  font-size: 1.4em;
+}
