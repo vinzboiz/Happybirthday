@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>23/10/2008</title>
+    <title>Happy birthday Vy!!!</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -268,26 +268,32 @@
         <div class="boxMail-container">
           <div class="card1">
             <div class="userImg">
-              <img src="tiendev.jpeg" alt="" />
+              <img src="Vy.jpg" alt="" />
             </div>
             <h3>Happy birthday</h3>
             <div class="imageCute">
-              <img src="cute1.png" alt="" />
+              <img style="height: 150px" src="cute2.png" alt="" />
             </div>
           </div>
           <div class="card2">
             <div class="card2-content">
-              <h3>Gửi tới bản thân</h3>
+              <h3>Gửi tới Vy</h3>
               <h2>
-                Hôm nay là một ngày đặc biệt để nhìn lại chặng đường đã qua. Hy
-                vọng năm tới sẽ mang đến nhiều niềm vui, thành công và những
-                trải nghiệm mới. Mong rằng tôi sẽ luôn kiên trì, mạnh mẽ và tự
-                tin theo đuổiước mơ. Đừng quên yêu thương bản thân nhiều hơn
-                nữa. Chúc tôi một tuổi mới tràn đầy hạnh phúc và sức khỏe!
+                Hôm nay là một dấu mốc đặc biệt không chỉ để nhìn lại hành trình
+                đã qua, mà còn là khởi đầu cho nhiều điều tốt đẹp phía trước. Dù
+                mới làm quen với Vy chưa lâu, nhưng Vinh tin rằng Vy là một
+                người có đầy sự nỗ lực và có một trái tim rất ấm áp. Mong rằng
+                năm tới sẽ mang đến cho Vy thật nhiều niềm vui, thành công và
+                những trải nghiệm đáng nhớ hơn nữa. Hãy luôn kiên cường, tự tin
+                và đừng quên yêu thương chính mình thật nhiều nha. Chúc Vy một
+                tuổi mới tràn đầy sức khỏe, hạnh phúc và thật nhiều điều tốt
+                lành nhé!!!
               </h2>
               <h2>..........................................</h2>
               <h2>Kí tên</h2>
-              <h2>Nguyễn Nam Tiến</h2>
+              <h2>Nguyễn Xuân Vinh</h2>
+              <h2>PS:</h2>
+              <h2>Tui cũng có quà đó nhưng mà để hôm nào gặp mới tặng nha!</h2>
               <div class="imageCute2">
                 <img src="cute2.png" alt="" />
               </div>
@@ -299,8 +305,8 @@
     <!--  -->
     <div class="text">
       <h1>Happy birthday!</h1>
-      <p>Lê Nguyễn Triệu Vy</p>
-      <p>23/10/2008</p>
+      <p>Le Nguyen Trieu Vy</p>
+      <p>13/07/2004</p>
       <div class="mail"></div>
     </div>
   </body>
@@ -324,15 +330,18 @@
 
       setTimeout(function () {
         heart.remove();
-      }, 1000);
+      }, 0);
     });
 
     let mailBox = document.querySelector(".mail");
     let boxmail = document.querySelector(".boxMail");
     var close = document.querySelector(".fa-xmark");
+
     mailBox.onclick = function () {
       mailBox.classList.toggle("active");
-      boxmail.classList.add("active");
+      setTimeout(() => {
+        boxmail.classList.add("active");
+      }, 1000); // Xuất hiện sau 1 giây
     };
 
     close.addEventListener("click", function () {
